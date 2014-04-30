@@ -1,11 +1,7 @@
 class FizzBuzz
   def fizzbuzz(x)
-    case
-    when x % 15 == 0; "fizzbuzz"
-    when x % 3 == 0; "fizz"
-    when x % 5 == 0; "buzz"
-    else x
-    end
+    ret_char = "#{["fizz"][x%3]}#{["buzz"][x%5]}"
+    ret_char.empty? ? x : ret_char
   end
 
   def main(max=100)
